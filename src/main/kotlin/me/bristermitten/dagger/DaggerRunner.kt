@@ -3,6 +3,7 @@ package me.bristermitten.dagger
 import dagger.Component
 import dagger.Module
 import dagger.Provides
+import me.bristermitten.testaspect.DaggerChildTestAspect
 import me.bristermitten.testaspect.DaggerTestAspect
 import javax.inject.Inject
 
@@ -12,7 +13,6 @@ class DaggerRunner {
         DaggerTestAspect.create().getCommands().forEach {
             println(it)
         }
-DaggerChildTestAspect.create()
     }
 
 }
